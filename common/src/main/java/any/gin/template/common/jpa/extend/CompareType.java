@@ -1,4 +1,4 @@
-package any.gin.template.common.specification;
+package any.gin.template.common.jpa.extend;
 
 /**
  * @author Gin

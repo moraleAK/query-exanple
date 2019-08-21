@@ -1,4 +1,4 @@
-package any.gin.template.common.specification;
+package any.gin.template.common.jpa.extend;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +9,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import static any.gin.template.common.specification.SpecificationUtils.*;
 
 /**
  * @author Gin
@@ -36,14 +34,14 @@ public class SpecificationFactory {
             Predicate predicate = criteriaBuilder.conjunction();
 
             // 查询TO属性
-            Map<String, Object> conditionMap = getProperties(queryCondition);
+            Map<String, Object> conditionMap = SpecificationUtils.getProperties(queryCondition);
             // 对应实体属性
-            Map<String, Method> entityMap = getPropertiesAndGetter(entityClass);
+            Map<String, Method> entityMap = SpecificationUtils.getPropertiesAndGetter(entityClass);
 
             // 内部类 此处customConditions 值被 static final 修饰，此处新建一个List 对其进行条件初始化
 
             // 把有注解的字段转换为查询条件
-            List<CustomCondition> conditions = new ArrayList<>(getCustomConditions(queryCondition));
+            List<CustomCondition> conditions = new ArrayList<>(SpecificationUtils.getCustomConditions(queryCondition));
 
             // 自定义条件转换
             if (conditions.size() > 0) {

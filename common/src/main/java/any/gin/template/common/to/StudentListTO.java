@@ -1,7 +1,7 @@
 package any.gin.template.common.to;
 
-import any.gin.template.common.specification.PageRequest;
-import any.gin.template.common.specification.SpecificationQuery;
+import any.gin.template.common.jpa.extend.PageRequest;
+import any.gin.template.common.jpa.extend.SpecificationQuery;
 
 /**
  * @author Gin

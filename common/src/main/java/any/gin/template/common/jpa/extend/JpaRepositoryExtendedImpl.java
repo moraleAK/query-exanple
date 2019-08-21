@@ -1,4 +1,4 @@
-package any.gin.template.common.specification;
+package any.gin.template.common.jpa.extend;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

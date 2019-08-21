@@ -1,7 +1,7 @@
 package any.gin.template.common.repository;
 
 import any.gin.template.common.entity.Student;
-import any.gin.template.common.specification.JpaRepositoryExtend;
+import any.gin.template.common.jpa.extend.JpaRepositoryExtend;
 
 /**
  * @author Gin

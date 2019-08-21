@@ -1,6 +1,6 @@
 package any.gin.template.common.entity;
 
-import any.gin.template.common.specification.BaseEntity;
+import any.gin.template.common.jpa.extend.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
