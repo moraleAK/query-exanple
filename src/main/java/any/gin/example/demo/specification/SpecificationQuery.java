@@ -27,24 +27,21 @@ public @interface SpecificationQuery {
     String join() default "";
 
     /**
-     * 类型转换，若方法名不为空，则调用改方法进行类型转换作为查询值
-     * 必须是一个无参方法
+     * 类型转换，若方法名不为空，则调用改方法进行类型转换作为查询值 必须是一个无参方法
      *
      * @return
      */
     String castMethod() default "";
 
     /**
-     * 动态获取忽略大小写方法
-     * 必须是一个无参方法
+     * 动态获取忽略大小写方法 必须是一个无参方法
      *
      * @return
      */
     String ignoreCaseMethod() default "";
 
     /**
-     * 忽略大小写 默认不忽略
-     * 优先按照{@link #ignoreCaseMethod()} 匹配
+     * 忽略大小写 默认不忽略 优先按照{@link #ignoreCaseMethod()} 匹配
      *
      * @return
      */

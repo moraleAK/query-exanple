@@ -13,7 +13,7 @@ import java.util.function.Function;
  * @since 2019/8/19 16:59
  */
 @NoRepositoryBean
-public interface JpaRepositoryExtend<T extends BaseEntity, ID> extends JpaRepository<T,ID>, JpaSpecificationExecutor {
+public interface JpaRepositoryExtend<T extends BaseEntity, ID> extends JpaRepository<T, ID>, JpaSpecificationExecutor {
 
     Optional<T> findByIdAndDeletedFalse(ID id);
 

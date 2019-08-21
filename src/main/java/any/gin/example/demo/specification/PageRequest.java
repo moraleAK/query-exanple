@@ -6,11 +6,6 @@ import org.springframework.util.StringUtils;
 
 import java.util.Optional;
 
-/**
- * User: Rolandz
- * Date: 7/12/16
- * Time: 8:40 AM
- */
 public class PageRequest implements Pageable {
     private int rows = 15;
 
@@ -71,24 +66,24 @@ public class PageRequest implements Pageable {
         this.sortDirection = sortDirection;
     }
 
-    public  org.springframework.data.domain.PageRequest toPageable(){
-        if(this.rows <= 0){
+    public org.springframework.data.domain.PageRequest toPageable() {
+        if (this.rows <= 0) {
             this.rows = 15;
         }
 
-        if(this.page <= 0){
+        if (this.page <= 0) {
             this.page = 1;
         }
 
-        if(StringUtils.isEmpty(this.sortProperty)){
+        if (StringUtils.isEmpty(this.sortProperty)) {
             this.sortProperty = "id";
             this.sortDirection = Sort.Direction.DESC;
         }
-        return org.springframework.data.domain.PageRequest.of(this.page - 1 , this.rows, this.sortDirection, this.sortProperty);
+        return org.springframework.data.domain.PageRequest.of(this.page - 1, this.rows, this.sortDirection, this.sortProperty);
 
     }
 
-    public boolean isDeleted(){
+    public boolean isDeleted() {
         return false;
     }
 

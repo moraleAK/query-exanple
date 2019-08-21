@@ -17,7 +17,7 @@ import java.util.function.Function;
  */
 @Transactional(readOnly = true)
 @SuppressWarnings("all")
-public class JpaRepositoryExtendedImpl<T extends BaseEntity,ID> extends SimpleJpaRepository implements JpaRepositoryExtend {
+public class JpaRepositoryExtendedImpl<T extends BaseEntity, ID> extends SimpleJpaRepository implements JpaRepositoryExtend {
     public JpaRepositoryExtendedImpl(JpaEntityInformation<T, ?> entityInformation, EntityManager entityManager) {
         super(entityInformation, entityManager);
     }
@@ -37,7 +37,7 @@ public class JpaRepositoryExtendedImpl<T extends BaseEntity,ID> extends SimpleJp
 
     @Override
     public Optional<T> findByIdAndDeletedFalse(Object id) {
-        TypedQuery<T> query = getQuery(SpecificationFactory.getConditions(new DeletedFalse(false, id ), getDomainClass()), Pageable.unpaged());
+        TypedQuery<T> query = getQuery(SpecificationFactory.getConditions(new DeletedFalse(false, id), getDomainClass()), Pageable.unpaged());
         return Optional.of(query.getSingleResult());
     }
 

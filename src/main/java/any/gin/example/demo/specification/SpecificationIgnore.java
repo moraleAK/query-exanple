@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * @author Gin
  * @since 2019/4/13 13:43
  */
-@Target({ElementType.FIELD,ElementType.METHOD})
+@Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
